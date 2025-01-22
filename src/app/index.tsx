@@ -1,10 +1,13 @@
+import React from "react";
+import { Routes, Route } from "react-router";
+import { Home } from "../routes/home";
+
 
 const App = (): React.JSX.Element => {
-
   return (
-    <>
-      <h1 className="text-orange-600 text-2xl">aaaa</h1>
-    </>
+    <Routes>
+      <Route index element={<Home/>} />
+    </Routes>
   )
 }
 
