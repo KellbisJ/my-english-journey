@@ -6,7 +6,7 @@ import { Home } from "../routes/home";
 const App = (): React.JSX.Element => {
   return (
     <Routes>
-      <Route index element={<Home/>} />
+      <Route path="/" element={<Home/>} />
     </Routes>
   )
 }
