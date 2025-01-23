@@ -1,6 +1,6 @@
 import { Layout } from "../../components/layout"
 import { ENGLISH_JOURNEY_DATA } from "../../data/english-journey-data"
-import { EnglishJourneyCard } from "../../components/english-jouney-card"
+import { EnglishJourneyCard } from "../../components/english-journey-card"
 
 const Home = (): React.JSX.Element => {
   return (
