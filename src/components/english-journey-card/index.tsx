@@ -1,19 +1,18 @@
 import React from 'react';
-import { EnglishJourneyInterface } from '../../interfaces/EnglishJourneyInterface';
+import { EnglishJourneyDataInterface } from '../../interfaces/english-journey-data-interface';
 import { GiWhiteBook } from "react-icons/gi";
 import { useNavigate } from 'react-router';
 
-const EnglishJourneyCard = ({ journeyInfo }: { journeyInfo: EnglishJourneyInterface }): React.JSX.Element => {
+const EnglishJourneyCard = ({ journeyInfo }: { journeyInfo: EnglishJourneyDataInterface }): React.JSX.Element => {
   const navigate = useNavigate()
   const handleClick = (slug: string) => {
     navigate(`/learn/${slug}`)
   }
 
-
   return (
-    <div className='p-4 bg-slate-200 dark:bg-gray-900 shadow-md rounded-lg mt-4 relative w-30 h-80 lg:w-60 lg:h-80 xl:w-80 xl:h-96 text-stone-950 dark:text-stone-100'>
+    <div className='p-4 bg-slate-200 dark:bg-gray-900 shadow-md rounded-lg relative w-30 h-60 lg:w-60 lg:h-80 xl:w-80 xl:h-96 text-stone-950 dark:text-stone-100'>
       <div className='flex flex-col h-full'>
-        <div className='mb-2 h-16'>
+        <div className='mb-2 h-16 overflow-hidden'>
           <h1 className='text-base lg:text-xl font-bold'>{journeyInfo.title}</h1>
         </div>
         <div className='flex flex-col justify-start h-3/5'>

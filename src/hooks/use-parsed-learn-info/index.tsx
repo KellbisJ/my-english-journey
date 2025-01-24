@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { parseMarkdown } from '../../utils/markdown-parser';
-import { EnglishJourneyInterface } from '../../interfaces/EnglishJourneyInterface';
+import { EnglishJourneyDataInterface } from '../../interfaces/english-journey-data-interface';
 
-const useParsedLearnInfo = (learnInfo: EnglishJourneyInterface | null) => {
+const useParsedLearnInfo = (learnInfo: EnglishJourneyDataInterface | null) => {
   const [parsedHtml, setParsedHtml] = useState<string | null>('');
 
   useEffect(() => {

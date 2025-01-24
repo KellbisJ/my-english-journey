@@ -1,6 +1,6 @@
 type Tier = 'Basic' | 'Medium' | 'Advanced';
 
-export interface EnglishJourneyInterface {
+export interface EnglishJourneyDataInterface {
 	id: number;
 	title: string;
 	preview: string;
