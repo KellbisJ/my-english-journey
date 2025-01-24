@@ -10,9 +10,9 @@ const EnglishJourneyCard = ({ journeyInfo }: { journeyInfo: EnglishJourneyDataIn
   }
 
   return (
-    <div className='p-4 bg-slate-200 dark:bg-gray-900 shadow-md rounded-lg relative w-30 h-60 lg:w-60 lg:h-80 xl:w-80 xl:h-96 text-stone-950 dark:text-stone-100'>
-      <div className='flex flex-col h-full'>
-        <div className='mb-2 h-16 overflow-hidden'>
+    <div className='p-4 bg-slate-200 dark:bg-gray-900 shadow-md rounded-lg w-30 h-60 lg:w-60 lg:h-80 xl:w-72 xl:h-96 text-stone-950 dark:text-stone-100'>
+      <div className='flex flex-col w-full h-full'>
+        <div className='mb-2 h-14 overflow-hidden'>
           <h1 className='text-base lg:text-xl font-bold'>{journeyInfo.title}</h1>
         </div>
         <div className='flex flex-col justify-start h-3/5'>
@@ -20,10 +20,21 @@ const EnglishJourneyCard = ({ journeyInfo }: { journeyInfo: EnglishJourneyDataIn
           {journeyInfo.preview}
           </p>
         </div>
+        <div className='flex flex-1 justify-between items-end'>
+           <p className={`${
+            journeyInfo.tier === 'Basic' ? 'text-green-500' :
+            journeyInfo.tier === 'Medium' ? 'text-yellow-500' :
+            journeyInfo.tier === 'Advanced' ? 'text-red-500' :
+            'text-gray-500'
+          }`}>
+            {journeyInfo.tier}
+          </p>
+          <div className='w-8 h-8 cursor-pointer' onClick={() => {handleClick(journeyInfo.slug)}}>
+            <GiWhiteBook className='w-full h-full object-contain object-center text-orange-400 hover:text-orange-600' />
+          </div>
+        </div>
       </div>
-      <div className='absolute bottom-2 right-2 w-8 h-8 cursor-pointer' onClick={() => {handleClick(journeyInfo.slug)}}>
-        <GiWhiteBook className='w-full h-full object-contain object-center text-orange-400 hover:text-orange-600' />
-      </div>
+      
     </div>
   );
 };
