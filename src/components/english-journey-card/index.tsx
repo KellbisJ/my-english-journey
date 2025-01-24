@@ -1,6 +1,6 @@
 import React from 'react';
 import { EnglishJourneyDataInterface } from '../../interfaces/english-journey-data-interface';
-import { GiWhiteBook } from "react-icons/gi";
+import { GiSpellBook } from "react-icons/gi";
 import { useNavigate } from 'react-router';
 
 const EnglishJourneyCard = ({ journeyInfo }: { journeyInfo: EnglishJourneyDataInterface }): React.JSX.Element => {
@@ -23,14 +23,14 @@ const EnglishJourneyCard = ({ journeyInfo }: { journeyInfo: EnglishJourneyDataIn
         <div className='flex flex-1 justify-between items-end'>
            <p className={`${
             journeyInfo.tier === 'Basic' ? 'text-green-500' :
-            journeyInfo.tier === 'Medium' ? 'text-yellow-500' :
+            journeyInfo.tier === 'Intermedium' ? 'text-yellow-500' :
             journeyInfo.tier === 'Advanced' ? 'text-red-500' :
             'text-gray-500'
           }`}>
             {journeyInfo.tier}
           </p>
           <div className='w-8 h-8 cursor-pointer' onClick={() => {handleClick(journeyInfo.slug)}}>
-            <GiWhiteBook className='w-full h-full object-contain object-center text-orange-400 hover:text-orange-600' />
+            <GiSpellBook className='w-full h-full object-contain object-center text-orange-400 hover:text-orange-600' />
           </div>
         </div>
       </div>

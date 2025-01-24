@@ -1,4 +1,4 @@
-type Tier = 'Basic' | 'Medium' | 'Advanced';
+type Tier = 'Basic' | 'Intermedium' | 'Advanced';
 
 export interface EnglishJourneyDataInterface {
 	id: number;
